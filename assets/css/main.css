@@ -970,7 +970,83 @@ input, select, textarea {
 	
 		.image.avatar {
 			margin: 0 auto;
-			padding-top: 8em;
+			padding-top: 4em;
+			width: 6em;
+		}
+	}
+
+
+	@media screen and (max-width: 600px) {
+		#header {
+			position: relative;
+			width: 100%;
+			height: auto;
+			padding: 2em 1em;
+			text-align: center;
+			/* margin-bottom: 4em; */
+		}
+	
+		.main-content {
+			margin-left: 0;
+			padding: 2em 1em;
+			width: 100%;
+		}
+		
+		.tabs {
+			position: fixed;
+			top: 1em;
+			display: flex;
+			flex-wrap: wrap;  /* Allow tabs to wrap into multiple rows */
+			gap: 0.5rem;  /* Reduced gap between tabs */
+			margin-bottom: 2rem;
+			z-index: 10;
+			padding: 0.2rem 0.3rem;  /* Smaller padding for tabs */
+			background-color: rgb(255, 255, 255);
+			border-radius: 1rem;
+			margin-right: 1rem;
+		}
+	
+		.tab {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: #66666673;
+			text-decoration: none;
+			padding: 0.25rem 0.8rem;  /* Smaller padding inside each tab */
+			font-size: 0.75em;  /* Smaller font size */
+			border-radius: 1rem;
+			border: 1px solid rgb(83, 81, 81);  /* Thinner border */
+			transition: color 0.3s;
+		}
+	
+		.tab.active {
+			color: #333;
+			font-weight: 700;
+		}
+	
+	
+		.experience-card,
+		.project-card,
+		.publication-card {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+	
+		h1 {
+			font-size: 1.75em;
+		}
+	
+		h2 {
+			font-size: 1.5em;
+		}
+	
+		p, ul, .tag {
+			font-size: 0.9em;
+		}
+	
+		.image.avatar {
+			margin: 0 auto;
+			padding-top: 6em;
 			width: 6em;
 		}
 	}
