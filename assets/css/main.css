@@ -230,6 +230,36 @@ input, select, textarea {
 	}
 
 
+	.hamburger {
+		display: none;
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+		z-index: 1000;
+		background: none;
+		border: 2px solid #333; /* Add a boundary */
+		border-radius: 8px; /* Rounded corners */
+		padding: 0.5rem; /* Add some space around the icon */
+		cursor: pointer;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+		transition: background-color 0.3s ease, transform 0.3s ease;
+	}
+	
+	.hamburger:hover {
+		background-color: #f8f8f8; /* Optional: Highlight on hover */
+		transform: scale(1.05); /* Slight zoom effect */
+	}
+	
+	.hamburger span {
+		display: block;
+		width: 30px;
+		height: 4px;
+		background-color: #333;
+		margin: 5px 0;
+		border-radius: 2px;
+		transition: 0.3s;
+	}
+	
 /* Section/Article */
 
 	section.special, article.special {
@@ -828,14 +858,14 @@ input, select, textarea {
 	}
 
 
-	@media screen and (max-width: 1229px) {
+	/* @media screen and (max-width: 1229px) {
 		#header {
 			position: relative;
 			width: 100%;
 			height: auto;
 			padding: 2em 1em;
 			text-align: center;
-			/* margin-bottom: 4em; */
+
 		}
 	
 		.main-content {
@@ -899,16 +929,15 @@ input, select, textarea {
 			padding-top: 4em;
 			width: 6em;
 		}
-	}
+	} */
 
-	@media screen and (max-width: 762px) {
+	@media screen and (max-width: 1229px) {
 		#header {
 			position: relative;
 			width: 100%;
 			height: auto;
 			padding: 2em 1em;
 			text-align: center;
-			/* margin-bottom: 4em; */
 		}
 	
 		.main-content {
@@ -917,15 +946,15 @@ input, select, textarea {
 			width: 100%;
 		}
 		
-		.tabs {
+		/* .tabs {
 			position: fixed;
 			top: 1em;
 			display: flex;
-			flex-wrap: wrap;  /* Allow tabs to wrap into multiple rows */
-			gap: 0.5rem;  /* Reduced gap between tabs */
+			flex-wrap: wrap;  
+			gap: 0.5rem;  
 			margin-bottom: 2rem;
 			z-index: 10;
-			padding: 0.3rem 0.8rem;  /* Smaller padding for tabs */
+			padding: 0.3rem 0.8rem;  
 			background-color: rgb(255, 255, 255);
 			border-radius: 1rem;
 		}
@@ -936,10 +965,10 @@ input, select, textarea {
 			gap: 0.5rem;
 			color: #66666673;
 			text-decoration: none;
-			padding: 0.25rem 0.8rem;  /* Smaller padding inside each tab */
-			font-size: 0.75em;  /* Smaller font size */
+			padding: 0.25rem 0.8rem; 
+			font-size: 0.75em;  
 			border-radius: 1rem;
-			border: 1px solid rgb(83, 81, 81);  /* Thinner border */
+			border: 1px solid rgb(83, 81, 81);  
 			transition: color 0.3s;
 		}
 	
@@ -947,7 +976,33 @@ input, select, textarea {
 			color: #333;
 			font-weight: 700;
 		}
+	 */
+
+	 .hamburger {
+		display: block;
+	  }
 	
+	  .tabs {
+		display: none; 
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 12.5rem; 
+		height: 100%;
+		background-color: #fff;
+		box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+		flex-direction: column;
+		gap: 1rem;
+		left: -1rem;
+		padding: 5rem 2rem;
+		z-index: 999;
+		border-radius: 0;
+	  }
+	
+	  .tabs.active {
+		display: flex; 
+	  }
+
 	
 		.experience-card,
 		.project-card,
@@ -970,37 +1025,36 @@ input, select, textarea {
 	
 		.image.avatar {
 			margin: 0 auto;
-			padding-top: 4em;
+			padding-top: 1.5em;
 			width: 6em;
 		}
 	}
 
 
-	@media screen and (max-width: 600px) {
+	/* @media screen and (max-width: 600px) {
 		#header {
 			position: relative;
 			width: 100%;
 			height: auto;
 			padding: 2em 1em;
 			text-align: center;
-			/* margin-bottom: 4em; */
 		}
 	
 		.main-content {
 			margin-left: 0;
 			padding: 2em 1em;
 			width: 100%;
-		}
+		} */
 		
-		.tabs {
+		/* .tabs {
 			position: fixed;
 			top: 1em;
 			display: flex;
-			flex-wrap: wrap;  /* Allow tabs to wrap into multiple rows */
-			gap: 0.5rem;  /* Reduced gap between tabs */
+			flex-wrap: wrap;  
+			gap: 0.5rem;  
 			margin-bottom: 2rem;
 			z-index: 10;
-			padding: 0.2rem 0.3rem;  /* Smaller padding for tabs */
+			padding: 0.2rem 0.3rem;  
 			background-color: rgb(255, 255, 255);
 			border-radius: 1rem;
 			margin-right: 1rem;
@@ -1012,18 +1066,42 @@ input, select, textarea {
 			gap: 0.5rem;
 			color: #66666673;
 			text-decoration: none;
-			padding: 0.25rem 0.8rem;  /* Smaller padding inside each tab */
-			font-size: 0.75em;  /* Smaller font size */
+			padding: 0.25rem 0.8rem;  
+			font-size: 0.75em; 
 			border-radius: 1rem;
-			border: 1px solid rgb(83, 81, 81);  /* Thinner border */
+			border: 1px solid rgb(83, 81, 81);  
 			transition: color 0.3s;
 		}
 	
 		.tab.active {
 			color: #333;
 			font-weight: 700;
+		} */
+
+		/* .hamburger {
+			display: block;
+		  }
+		
+		.tabs {
+		display: none; 
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 12.5rem; 
+		height: 100%;
+		background-color: #fff;
+		box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+		flex-direction: column;
+		gap: 1rem;
+		left: -1rem;
+		padding: 5rem 2rem;
+		z-index: 999;
+		border-radius: 0;
 		}
 	
+		.tabs.active {
+		display: flex; 
+		}
 	
 		.experience-card,
 		.project-card,
@@ -1046,7 +1124,7 @@ input, select, textarea {
 	
 		.image.avatar {
 			margin: 0 auto;
-			padding-top: 6em;
+			padding-top: 1.5em;
 			width: 6em;
 		}
-	}
+	} */
