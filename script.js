@@ -56,4 +56,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById("chatbot-button").onclick = function () {
+    const window = document.getElementById("chatbot-window");
+    window.style.display = window.style.display === "none" ? "block" : "none";
+};
+
+document.getElementById("chatbot-send").onclick = async function () {
+    const input = document.getElementById("chatbot-input");
+    const message = input.value;
+    input.value = ""; // Clear input field
+
+    if (message.trim() === "") return;
+
+    // Add user's message to the chat window
+    const messages = document.getElementById("chatbot-messages");
+    messages.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+
+    // Send the query to the backend
+    const response = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: message }),
+    });
+    const data = await response.json();
+
+    // Add response to the chat window
+    messages.innerHTML += `<div><strong>Bot:</strong> ${data.responses[0]}</div>`;
+    messages.scrollTop = messages.scrollHeight; // Auto-scroll to the bottom
+};
 
