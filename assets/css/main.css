@@ -648,8 +648,13 @@ input, select, textarea {
 
 	#header .icons a {
 			color: rgba(255, 255, 255, 0.4);
+			font-size: 1.4em;
 		}
 
+		#header .icons a:hover {
+			color: #ffffff;
+			transform: scale(1.1);  /* Slight zoom effect on hover */
+		}
 
 	#header > * {
 		-moz-flex-shrink: 0;
@@ -692,15 +697,23 @@ input, select, textarea {
 	}
 
 	#header h1 {
-		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.35em;
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.8em;
 		line-height: 1.75em;
 		margin: 0;
+		letter-spacing: 1px;
+	}
+
+	#header h4 {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 1.2em;  /* Increased from 1em */
+		line-height: 1.5em;
+		margin: 0.5em 0;  /* Added some spacing */
 	}
 
 	#header .image.avatar {
 		margin: 0 0 1em 0;
-		width: 8.5em;
+		width: 12em;
 	}
 
 /* New main */
@@ -1123,7 +1136,7 @@ input, select, textarea {
 		.image.avatar {
 			margin: 0 auto;
 			padding-top: 1.5em;
-			width: 6em;
+			width: 9em;
 		}
 
 		.tab {
