@@ -723,26 +723,45 @@ input, select, textarea {
 		margin-bottom: 2rem;
 		z-index: 10;
 		padding: 1rem;
-		background-color: rgb(255, 255, 255);
+		background-color: rgba(255, 255, 255, 0.95);  /* Slightly transparent background */
 		border-radius: 1rem;
-
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);   /* Subtle shadow */
+		backdrop-filter: blur(5px);                    /* Frosted glass effect */
 	}
 
 	.tab {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		color: #66666673;
+		color: #666;
 		text-decoration: none;
-		padding: 0.5rem 1rem;
-		border-radius: 1rem;
-		border: 1.25px solid rgb(83, 81, 81);   
-		transition: color 0.3s;
+		padding: 0.75rem 1.25rem;
+		border-radius: 0.75rem;
+		border: 1px solid #e0e0e0;   
+		transition: all 0.3s ease;    /* Smooth transition for all properties */
+		background-color: white;
+		font-weight: 500;
+	}
+
+	.tab:hover {
+		background-color: #f8f8f8;
+		transform: translateY(-1px);   /* Slight lift effect */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 	}
 
 	.tab.active {
-		color: #333;
-		font-weight: 700;
+		color: #49bf9d;               /* Using your theme color */
+		font-weight: 600;
+		border-color: #49bf9d;
+		background-color: rgba(73, 191, 157, 0.1);  /* Light theme color background */
+	}
+
+	.tab svg {
+		transition: stroke 0.3s ease;
+	}
+
+	.tab.active svg {
+		stroke: #49bf9d;              /* Match icon color with active state */
 	}
 
 	.experience-card {
@@ -1066,20 +1085,19 @@ input, select, textarea {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 12.5rem; 
+		width: 14rem;             /* Slightly wider for better readability */
 		height: 100%;
-		background-color: #fff;
-		box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+		background-color: white;
+		box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
 		flex-direction: column;
-		gap: 1rem;
-		left: -1rem;
-		padding: 5rem 2rem;
+		gap: 0.75rem;
+		padding: 5rem 1.5rem;
 		z-index: 999;
 		border-radius: 0;
 	  }
-	
+
 	  .tabs.active {
-		display: flex; 
+		display: flex;
 	  }
 
 	
@@ -1106,6 +1124,12 @@ input, select, textarea {
 			margin: 0 auto;
 			padding-top: 1.5em;
 			width: 6em;
+		}
+
+		.tab {
+			width: 100%;
+			justify-content: flex-start;
+			padding: 0.85rem 1rem;
 		}
 	}
 
