@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection';
+
 const Projects = () => {
   const projects = [
     {

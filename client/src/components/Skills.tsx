@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection';
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -46,32 +48,38 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={category.title} className="bg-background rounded-2xl p-6 border border-border shadow-sm">
-              <h3 className="text-xl font-semibold mb-6 text-center" data-testid={`category-${category.title.toLowerCase()}`}>
-                {category.title}
-              </h3>
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium" data-testid={`skill-name-${skill.name.toLowerCase().replace(/\./g, '')}`}>
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-muted-foreground" data-testid={`skill-level-${skill.name.toLowerCase().replace(/\./g, '')}`}>
-                        {skill.level}%
-                      </span>
+            <AnimatedSection 
+              key={category.title} 
+              animation="fadeUp" 
+              delay={categoryIndex * 200}
+            >
+              <div className="bg-background rounded-2xl p-6 border border-border shadow-sm h-full">
+                <h3 className="text-xl font-semibold mb-6 text-center" data-testid={`category-${category.title.toLowerCase()}`}>
+                  {category.title}
+                </h3>
+                <div className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div key={skill.name} className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium" data-testid={`skill-name-${skill.name.toLowerCase().replace(/\./g, '')}`}>
+                          {skill.name}
+                        </span>
+                        <span className="text-sm text-muted-foreground" data-testid={`skill-level-${skill.name.toLowerCase().replace(/\./g, '')}`}>
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div
+                          className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
+                          data-testid={`skill-bar-${skill.name.toLowerCase().replace(/\./g, '')}`}
+                        />
+                      </div>
                     </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                        data-testid={`skill-bar-${skill.name.toLowerCase().replace(/\./g, '')}`}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
