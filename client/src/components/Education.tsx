@@ -8,11 +8,7 @@ const Education = () => {
       period: "2018-2023",
       description:
         "Electrical Engineering and Computer Science (EECS) (major) and Data Science and Engineering (DSE) (minor)",
-      achievements: [
-        "Dean's List",
-        "Research Assistant",
-        "Thesis on AI Applications",
-      ],
+      achievements: ["Research Assistant", "Thesis on AI Applications"],
     },
   ];
 
