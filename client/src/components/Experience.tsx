@@ -10,7 +10,7 @@ const Experience = () => {
         "Enhanced healthcare data privacy by building AI-powered de-identification system, achieving 98% accuracy across 5,000+ patient records, cutting compliance costs by 95% with results published at ACL 2024",
         "Reduced clinical protocol authoring time from weeks to hours by developing AI-assisted document writing tool (custom RAG + advanced post-processing), adopted by clinical teams to accelerate pharma trials and regulatory submissions",
       ],
-      technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+      technologies: ["Python", "Large Language Models (LLMs)", "AI Agents", "Machine Learning", "Deep Learning", "Vector Databases", "Finetuning"],
     },
     {
       title: "AI Research Intern",

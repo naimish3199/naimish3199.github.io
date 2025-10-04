@@ -1,5 +1,6 @@
 import profileImagePath from "@assets/generated_images/Naimish_Photo.png";
 import AnimatedSection from "./AnimatedSection";
+import { Download } from "lucide-react";
 
 const About = () => {
   return (
@@ -43,7 +44,7 @@ const About = () => {
                   className="text-xl md:text-2xl text-muted-foreground mb-6"
                   data-testid="role-subtitle"
                 >
-                  Data Scientist & AI/ML Expert
+                  Data Scientist & AI/ML Expert | IISER Bhopal Alumni
                 </h2>
               </div>
 
@@ -59,23 +60,6 @@ const About = () => {
                 to production-ready models, I thrive on solving challenging
                 problems, learning fast, and delivering solutions that matter.
               </p>
-
-              {/* <div className="flex flex-wrap gap-4">
-                <button
-                  className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
-                  data-testid="button-hire-me"
-                  onClick={() => console.log("Hire me clicked")}
-                >
-                  Hire Me
-                </button>
-                <button
-                  className="border border-border px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
-                  data-testid="button-download-cv"
-                  onClick={() => console.log("Download CV clicked")}
-                >
-                  Download CV
-                </button>
-              </div> */}
 
               <div className="flex space-x-8 -mt-2">
                 {[
@@ -119,6 +103,31 @@ const About = () => {
                     </svg>
                   </a>
                 ))}
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                {/* <button
+                  className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
+                  data-testid="button-hire-me"
+                  onClick={() => console.log("Hire me clicked")}
+                >
+                  Hire Me
+                </button> */}
+                {/* <button
+                  className="border border-border px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
+                  data-testid="button-download-cv"
+                  onClick={() => console.log("Download CV clicked")}
+                >
+                  Download Resume
+                </button> */}
+                <button
+                  className="border border-border px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium flex items-center gap-2"
+                  data-testid="button-download-cv"
+                  onClick={() => console.log("Download CV clicked")}
+                >
+                  <Download size={20} />
+                  Download Resume
+                </button>
               </div>
             </div>
           </AnimatedSection>

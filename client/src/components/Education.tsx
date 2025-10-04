@@ -6,9 +6,12 @@ const Education = () => {
       school:
         "Indian Institute of Science Education and Research (IISER), Bhopal",
       period: "2018-2023",
-      description:
-        "Electrical Engineering and Computer Science (EECS) (major) and Data Science and Engineering (DSE) (minor)",
-      achievements: ["Research Assistant", "Thesis on AI Applications"],
+      major: "Electrical Engineering and Computer Science (EECS)",
+      minor: "Data Science and Engineering (DSE)",
+      achievements: [
+        "Achieved 10/10 SPI in Semester 10",
+        "Research paper based on master's thesis published at QUATIC 2024",
+      ],
     },
   ];
 
@@ -80,12 +83,20 @@ const Education = () => {
                     </div>
                   </div>
 
-                  <p
-                    className="text-muted-foreground mb-4"
-                    data-testid={`description-${index}`}
-                  >
-                    {edu.description}
-                  </p>
+                  <div className="mb-4 space-y-1">
+                    <p
+                      className="text-muted-foreground"
+                      data-testid={`major-${index}`}
+                    >
+                      <span className="font-semibold">Major:</span> {edu.major}
+                    </p>
+                    <p
+                      className="text-muted-foreground"
+                      data-testid={`minor-${index}`}
+                    >
+                      <span className="font-semibold">Minor:</span> {edu.minor}
+                    </p>
+                  </div>
 
                   <div className="space-y-2">
                     <h5 className="font-semibold">Achievements:</h5>
