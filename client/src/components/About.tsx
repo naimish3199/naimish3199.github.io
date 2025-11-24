@@ -52,13 +52,11 @@ const About = () => {
                 className="text-lg text-muted-foreground leading-relaxed"
                 data-testid="bio-text"
               >
-                I'm a passionate developer with over 2 years of experience
-                building impactful AI products and solutions from complex data.
-                I specialize in Python, NLP, LLMs, GenAI, Machine Learning and
-                Deep Learning, turning advanced AI techniques into real-world
-                tools that drive measurable business impact. From messy datasets
-                to production-ready models, I thrive on solving challenging
-                problems, learning fast, and delivering solutions that matter.
+                I'm a developer with 2 years of experience building impactful AI products/solutions from complex data. I specialize in Python, NLP, LLMs, GenAI, Machine Learning and Deep Learning, turning advanced AI techniques into
+                real-world tools that drive measurable business impact. I care
+                about the full pipeline i.e. understanding requirements, building
+                robust solutions, and shipping systems that scale. I thrive on
+                learning fast and delivering work that matters.
               </p>
 
               <div className="flex space-x-8 -mt-2">
@@ -106,20 +104,6 @@ const About = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                {/* <button
-                  className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
-                  data-testid="button-hire-me"
-                  onClick={() => console.log("Hire me clicked")}
-                >
-                  Hire Me
-                </button> */}
-                {/* <button
-                  className="border border-border px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium"
-                  data-testid="button-download-cv"
-                  onClick={() => console.log("Download CV clicked")}
-                >
-                  Download Resume
-                </button> */}
                 <button
                   className="border border-border px-6 py-3 rounded-lg hover-elevate active-elevate-2 font-medium flex items-center gap-2"
                   data-testid="button-download-cv"
