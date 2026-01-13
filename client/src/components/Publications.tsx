@@ -7,11 +7,11 @@ const Publications = () => {
       title:
         "On the Use of Unsupervised Machine Learning for Classification of Crowd-Based Software Requirements",
       type: "Research Paper",
-      platform: "Journal of Systems & Software, Elsevier",
-      date: "Oct 2025",
+      platform: "Journal of Systems & Software (JSS), Elsevier 2026",
+      date: "Dec 2025",
       description:
         "Crowd-based requirements engineering (CrowdRE) involves large-scale user participation to gather software requirements. Supervised machine learning (SML) is commonly used to classify these requirements but demands significant time, computational resources, and high-quality labeled data, which are scarce in CrowdRE. The objective of this paper is to investigate the potential of clustering-based unsupervised ML to classify crowd-based requirements. Our framework evaluates sentence embedding models which convert textual requirements into numerical vectors, selecting optimal ones using information retrieval (IR) measures. These vectors are grouped via clustering algorithms, followed by manual or automated label assignment. Automated labeling involves generating a class-specific corpus for every class and computing semantic similarity to assign labels, while manual labeling is supported by topic modeling which uncovers thematic structures within every cluster. We validated the framework on 3000 crowd-generated smart home requirements, tackling binary, tertiary, quaternary, and quinary classification tasks. Automated labeling achieved F1 scores of up to ~90%, ~82%, ~70%, and ~52%, respectively, with manual labeling showing similar performance. Compared to logistic regression which is a supervised ML model, our framework occasionally outperformed it in F1 scores. Against Llama-3.2-3B-Instruct, which is a state-of-the-art lightweight large language model (LLM), it surpassed performance in 38% of automated and 35% of manual labeling cases. We also show that our framework enables one to analyze and identify labeling-related issues in the dataset, enhancing ground-truth data quality. These findings show that computationally efficient unsupervised methods effectively classify software requirements in data-scarce CrowdRE settings, offering a viable alternative to supervised approaches.",
-      link: "",
+      link: "https://www.sciencedirect.com/science/article/abs/pii/S0164121225003930",
       isNew: true,
       tags: [
         // "Unsupervised Machine Learning",
@@ -122,11 +122,11 @@ const Publications = () => {
                     <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                       {pub.title}
 
-                      {pub.isNew && (
+                      {/* {pub.isNew && (
                         <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-primary to-primary/80 text-white shadow-lg shadow-primary/50 border border-primary/30 hover:shadow-primary/70 hover:scale-105 transition-all duration-200">
                           Accepted
                         </span>
-                      )}
+                      )} */}
                       {/* {pub.isNew && (
                         <span className="ml-3 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary">
                           New
